@@ -15,12 +15,6 @@
             font-family: 'Work Sans', sans-serif;
         }
     
-        .responsive-container {
-            padding: 0 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    
         .blog-content img {
             width: 100%;
             object-fit: cover;
@@ -28,17 +22,18 @@
     
         .blog-main {
             display: flex;
+            flex-direction: column;
             margin-top: 40px;
         }
     
         .blog-main .image-section {
-            flex: 1 1 30%;
-            padding-right: 1rem;
+            flex: 1 1 100%;
+            padding-right: 0;
         }
     
         .blog-main .content-section {
-            flex: 1 1 60%;
-            padding-left: 1rem;
+            flex: 1 1 100%;
+            padding-left: 0;
         }
     
         .blog-item {
@@ -47,6 +42,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
     
         .blog-item:hover {
@@ -109,72 +105,51 @@
     </script>
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-gray-100 font-sans">
     <header class="bg-blue-700 text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between items-start md:items-center md:px-8">
             <div class="text-xl md:text-3xl font-bold mb-2 md:mb-0 text-left">K V G C E O S C</div>
             <nav class="flex space-x-4 text-sm md:text-base text-left mt-2 md:mt-0">
                 <a href="index.html" class="hover:text-gray-300">Home</a>
                 <a href="events.html" class="hover:text-gray-300">Events</a>
-                <a href="#" class="hover:text-gray-300">Blogs</a>
+                <a href="blogs.html" class="hover:text-gray-300">Blogs</a>
                 <a href="team.html" class="hover:text-gray-300">Team</a>
-                <a href="#" class="hover:text-gray-300">WOR</a>
             </nav>
         </div>
     </header>
     
-   <main class="container mx-auto px-4 py-8 md:px-8 responsive-container">
-    <!-- Blog Main Section -->
-   
-    <div class="blog-main container mx-auto px-4 py-8 md:px-8 responsive-container" >
-        
-        
+    <main class="container mx-auto px-4 py-8 md:px-8">
+        <!-- Blog Main Section -->
+        <div class="blog-main">
             <!-- Blog Item with White Background and Hover Effect -->
-        
-                <a href="blogs_details/inauguration.html" class="blog-item flex">
+            <a href="blogs_details/inauguration.html" class="blog-item flex flex-col md:flex-row">
                 <!-- Image Section (30% width) -->
-                <div class="image-section">
-                    <img src="assets/Blogs/2.png" alt="Blog Image" style="width: 500px;height: 250px;">
+                <div class="image-section mb-4 md:mb-0 md:mr-4">
+                    <img src="assets/Blogs/inn.jpg" alt="Blog Image" class="w-full h-64 object-cover">
                 </div>
                 <!-- Content Section (60% width) -->
                 <div class="content-section">
                     <h2 class="text-2xl font-bold blog-title">Inauguration of Our College Open Source Community</h2>
                     <p class="text-lg mt-2">Our college launched its Open Source Community on November 15, 2024, led by Principal Dr. Suresha V and CEO Dr. Ujwal U J. The community fosters collaboration and hands-on learning, inviting students to join impactful projects, workshops, and coding sessions. We look forward to building a collaborative digital future together!</p>
                 </div>
-                </a>
-       
-        
-    </div>
+            </a>
+        </div>
 
-</main>
-
-
-    <main class="container mx-auto px-4 py-8 md:px-8 responsive-container">
-        <!-- Blog Main Section -->
-        <div class="blog-main"> 
+        <div class="blog-main">
             <!-- Blog Item with White Background and Hover Effect -->
-            <a href="blogs_details/Team_members.html" class="blog-item flex">
+            <a href="blogs_details/Team_members.html" class="blog-item flex flex-col md:flex-row">
                 <!-- Image Section (30% width) -->
-                <div class="image-section">
-                    <img src="assets/Blogs/OSC Members.jpg" alt="Blog Image">
+                <div class="image-section mb-4 md:mb-0 md:mr-4">
+                    <img src="assets/Blogs/OSC Members.jpg" alt="Blog Image" class="w-full h-64 object-cover">
                 </div>
                 <!-- Content Section (60% width) -->
                 <div class="content-section">
                     <h2 class="text-2xl font-bold blog-title">The Visionaries Behind Our Open Source Community</h2>
                     <p class="text-lg mt-2 text-justify">Our college's Open Source Community is led by a dedicated team, including President Nithish Vasanth, Vice President Durga Prasad N, and other key members who manage technical projects, events, finances, and marketing. Together, they create an inclusive space for students to learn, collaborate, and make impactful contributions. With their guidance, the community is set to drive innovation and growth in open-source development.</p>
-
-                    <!-- Event Organizer Info -->
-                    <!-- <div class="profile-info">
-                        <img src="assets/ndpn.jpg" alt="Profile Picture" class="profile-pic">
-                        <p class="organizer-name">Organizer: John Doe</p>
-                       
-                    </div> -->
-                    
                 </div>
             </a>
         </div>
     </main>
-
 
     <footer class="bg-blue-700 text-white py-8 mt-16">
         <div class="container mx-auto md:text-left">
@@ -182,7 +157,7 @@
                 <!-- Social Links Section -->
                 <div class="flex flex-col items-start space-y-2">
                     <h3 class="text-lg font-semibold">Connect with Us</h3>
-                    <a href="#" class="transition-colors duration-300 hover:text-pink-400">GitHub</a>
+                    <a href="https://github.com/kvgce-osc" target="_blank" class="transition-colors duration-300 hover:text-pink-400">GitHub</a>
                     <a href="https://www.instagram.com/kvgceosc?igsh=MXYxd3dxaHI1dTBxOQ==" target="_blank" class="transition-colors duration-300 hover:text-pink-400">Instagram</a>
                     <a href="https://www.linkedin.com/company/kvgceosc/" target="_blank" class="transition-colors duration-300 hover:text-pink-400">LinkedIn</a>
                     <a href="#" class="transition-colors duration-300 hover:text-pink-400">Twitter</a>
