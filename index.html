@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <title>KVGCEOSC - Tech Community</title>
+    <meta name="google-site-verification" content="hCES4N19HVIR9Cv3YYtMeSjO4a1R0QHAY795fVEI1c0" />
     <meta name="description" content="KVGCEOSC is a  community driven by tech enthusiasts and open-source contributors, dedicated to helping students engage with the open-source ecosystem by providing training and skill development.">
     <meta name="keywords" content="KVGCEOSC, tech community, open-source, training, skill development">
     <meta name="author" content="KVG College of Engineering Sullia">
@@ -24,12 +25,20 @@
 
  
      <!-- Stylesheets -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-...hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
      <link rel="icon" type="image/png" href="assets/favicon.png">
      <link href="https://www.kvgceosc.org/" rel="canoni">
      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        }
+
         body {
             font-family: 'Work Sans', sans-serif;
            
@@ -68,13 +77,33 @@
     }
 }
 
+.container {
+    -webkit-border-radius: 10px; /* Safari and Chrome */
+    -moz-border-radius: 10px; /* Firefox */
+    border-radius: 10px; /* Standard */
+}
+
+@supports (-ms-ime-align: auto) {
+    .container {
+        margin-left: -100px; /* Adjust for Edge */
+    }
+}
+.edge-browser .container {
+    margin: -300px !important; /* Adjust margin for Edge */
+    padding-left: -2rem;
+}
+
 
 
     </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
-
+<script>const isEdge = /Edg/.test(navigator.userAgent);
+    if (isEdge) {
+        document.body.classList.add('edge-browser');
+    }
+    </script>
 <body class="bg-white text-gray-800" >
     <header class="bg-blue-700 text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between items-start md:items-center md:px-8">
